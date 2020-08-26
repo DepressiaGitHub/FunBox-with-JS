@@ -1,0 +1,180 @@
+$default-color: #1698d9;
+$default-hover-color: #2ea8e6;
+$active-color: #d91667;
+$active-hover-color: #e62e7a;
+$disabled-color: #b3b3b3;
+
+.card {
+  position: relative;
+}
+
+.card__background {
+  fill: transparent;
+  stroke: #1698d9;
+  stroke-width: 4px;
+  fill-rule: evenodd;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card__item {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  overflow: hidden;
+  width: 320px;
+  height: 480px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, transparent 30px, #f2f2f2 0);
+}
+
+.card__text {
+  margin: 20px 45px;
+}
+
+.card__photo {
+  position: absolute;
+  bottom: -88px;
+  left: -24px;
+  max-width: 370px;
+}
+
+.card__price {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  text-align: center;
+  width: 81px;
+  height: 81px;
+  color: #ffffff;
+  background-color: $default-color;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  text-transform: lowercase;
+}
+
+.card__slogan {
+  color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+  line-height: 13px;
+  width: 320px;
+  margin: 20px 0;
+}
+
+.card__slogan--selected {
+  display: none;
+}
+
+.card__slogan--disabled {
+  color: #ffff66;
+  display: none;
+}
+
+.card__link {
+  color: $default-color;
+  text-decoration: none;
+  border-bottom: 1px dashed $default-color;
+  cursor: pointer;
+}
+
+.card__point {
+  color: $default-color;
+}
+
+/* Активные состояния карточек, начало. */
+
+.card--active .card__slogan--selected {
+  display: block;
+}
+
+.card--active .card__slogan--default,
+.card--active .card__slogan--disabled {
+  display: none;
+}
+
+.card--active .card__background {
+  stroke: $active-color;
+}
+
+.card--active .card__price {
+  background-color: $active-color;
+}
+
+.card--active:not(.no-hover):hover .description__title {
+  display: none;
+}
+
+.card--active:not(.no-hover):hover .description__title--selected {
+  display: block;
+}
+
+.card:not(.no-hover):hover .card__background {
+  stroke: $default-hover-color;
+}
+
+.card:not(.no-hover):hover .card__link {
+  color: $default-hover-color;
+}
+
+.card:not(.no-hover):hover .card__price {
+  background-color: $default-hover-color;
+}
+
+.card--active:not(.no-hover):hover .card__background {
+  stroke: $active-hover-color;
+}
+
+.card--active:not(.no-hover):hover .card__price {
+  background-color: $active-hover-color;
+}
+
+.card--disabled .card__item {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: linear-gradient(135deg, transparent 30px, #ffffff 0);
+  }
+
+  .description__content,
+  .description__title,
+  .description__name,
+  .description__with {
+    color: $disabled-color;
+  }
+}
+
+.card--disabled .card__background {
+  stroke: $disabled-color;
+  cursor: not-allowed;
+}
+
+.card--disabled .card__price {
+  background-color: $disabled-color;
+}
+
+.card--disabled .card__slogan--default,
+.card--disabled .card__slogan--selected {
+  display: none;
+}
+
+.card--disabled .card__slogan--disabled {
+  display: block;
+}
+
+.card--disabled:not(.no-hover):hover .card__background {
+  stroke: $disabled-color;
+}
+
+.card--disabled:not(.no-hover):hover .card__price {
+  background-color: $disabled-color;
+}

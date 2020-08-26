@@ -1,0 +1,60 @@
+.food__list {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.food__item {
+  margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .food__list {
+    width: 720px;
+    flex-direction: row;
+    align-items: normal;
+  }
+
+  .food__item {
+    margin-right: 80px;
+
+    &:nth-child(2n+1) {
+      margin-right: 0;
+    }
+
+    &:first-of-type {
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .food__list {
+    width: 1120px;
+    justify-content: flex-start;
+  }
+
+  .food__item:first-of-type {
+    margin-left: 0;
+  }
+
+  .food__item {
+    &:nth-child(2n+1) {
+      margin-right: 80px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

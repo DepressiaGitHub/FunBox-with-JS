@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://allfont.ru/allfont.css?fonts=exo-20-thin" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Тестовое задание Александра Масленникова для funbox</title>
+  </head>
+  <body>
+    <header class="page-header">
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__title">Ты сегодня покормил кота?</h1>
+      <section class="food">
+        <ul class="food__list">
+          <li class="food__item card">
+            <input class="visually-hidden food__input-checkbox" type="checkbox" id="fua-gra" name="fua-gra">
+            <label for="fua-gra">
+              <svg class="card__background" xmlns="http://www.w3.org/2000/svg" width="324" height="484" viewBox="0 0 324 484">
+                <path d="M310,2H45L2,45v425c0,6.6,5.4,12,12,12h296c6.6,0,12-5.4,12-12V14C322,7.4,316.6,2,310,2z"/>
+              </svg>
+              <div class="card__item">
+                <div class="card__text">
+                  <p class="description__title">Сказочное заморское яство</p>
+                  <p class="description__title description__title--selected">Котэ не одобряет?</p>
+                  <h2 class="description__name">Нямушка</h2>
+                  <p class="description__with">С фуа-гра</p>
+                  <div class="description__content">
+                    <p>10 порций</p>
+                    <p>Мышь в подарок</p>
+                  </div>
+                </div>
+                <img class="card__photo" src="img/cat.png" width="370" heigth="361" alt="Фотография кота">
+                <div class="card__price">
+                  <span class="price__value">0,5</span>
+                  <span class="price__type">кг</span>
+                </div>
+              </div>
+            </label>
+            <p class="card__slogan card__slogan--default">Чего сидишь? Порадуй котэ, <label for="fua-gra" class="card__link">купи</label><span class="card__point">.</span></p>
+            <p class="card__slogan card__slogan--selected">Печень утки разварная с артишоками.</p>
+            <p class="card__slogan card__slogan--disabled">Печалька, с фуа-гра закончился.</p>
+          </li>
+          <li class="food__item card">
+            <input class="visually-hidden food__input-checkbox" type="checkbox" id="fish" name="fish" checked>
+            <label for="fish">
+              <svg class="card__background" xmlns="http://www.w3.org/2000/svg" width="324" height="484" viewBox="0 0 324 484">
+                <path d="M310,2H45L2,45v425c0,6.6,5.4,12,12,12h296c6.6,0,12-5.4,12-12V14C322,7.4,316.6,2,310,2z"/>
+              </svg>
+              <div class="card__item">
+                <div class="card__text description">
+                  <p class="description__title">Сказочное заморское яство</p>
+                  <p class="description__title description__title--selected">Котэ не одобряет?</p>
+                  <h2 class="description__name">Нямушка</h2>
+                  <p class="description__with">С рыбой</p>
+                  <div class="description__content">
+                    <p>40 порций</p>
+                    <p>2 мыши в подарок</p>
+                  </div>
+                </div>
+                <img class="card__photo" src="img/cat.png" width="370" heigth="361" alt="Фотография кота">
+                <div class="card__price price">
+                  <span class="price__value">2</span>
+                  <span class="price__type">кг</span>
+                </div>
+              </div>
+            </label>
+            <p class="card__slogan card__slogan--default">Чего сидишь? Порадуй котэ, <label for="fish" class="card__link">купи</label><span class="card__point">.</span></p>
+            <p class="card__slogan card__slogan--selected">Головы щучьи с чесноком да свежайшая сёмгушка.</p>
+            <p class="card__slogan card__slogan--disabled">Печалька, с рыбой закончился.</p>
+          </li>
+          <li class="food__item card">
+            <input class="visually-hidden food__input-checkbox" type="checkbox" id="chikken" name="chikken" disabled>
+            <label for="chikken">
+              <svg class="card__background" xmlns="http://www.w3.org/2000/svg" width="324" height="484" viewBox="0 0 324 484">
+                <path d="M310,2H45L2,45v425c0,6.6,5.4,12,12,12h296c6.6,0,12-5.4,12-12V14C322,7.4,316.6,2,310,2z"/>
+              </svg>
+              <div class="card__item">
+                <div class="card__text">
+                  <p class="description__title">Сказочное заморское яство</p>
+                  <p class="description__title description__title--selected">Котэ не одобряет?</p>
+                  <h2 class="description__name">Нямушка</h2>
+                  <p class="description__with">С курой</p>
+                  <div class="description__content">
+                    <p>100 порций</p>
+                    <p>5 мышей в подарок</p>
+                    <p>Заказчик доволен</p>
+                  </div>
+                </div>
+                <img class="card__photo" src="img/cat.png" width="370" heigth="361" alt="Фотография кота">
+                <div class="card__price">
+                  <span class="price__value">5</span>
+                  <span class="price__type">кг</span>
+                </div>
+              </div>
+            </label>
+            <p class="card__slogan card__slogan--default">Чего сидишь? Порадуй котэ, <label for="chikken" class="card__link" href="#">купи</label><span class="card__point">.</span></p>
+            <p class="card__slogan card__slogan--selected">Филе из цыплят с трюфелями в бульоне.</p>
+            <p class="card__slogan card__slogan--disabled">Печалька, с курой закончился.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="page-footer">
+    </footer>
+    <script src="js/all.js"></script>
+  </body>
+</html>

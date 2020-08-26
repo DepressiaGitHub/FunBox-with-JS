@@ -1,0 +1,311 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  background: #ffffff;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  color: black; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.display-none {
+  display: none; }
+
+.page-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-image: url("../img/Pattern.png");
+  background-size: auto;
+  background-repeat: repeat; }
+
+.page-main__title {
+  margin: 0;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Exo 2.0 Thin", "Arial", serif;
+  font-weight: 300; }
+
+.food__list {
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none; }
+
+.food__item {
+  margin-bottom: 40px; }
+
+@media (min-width: 720px) {
+  .food__list {
+    width: 720px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal; }
+  .food__item {
+    margin-right: 80px; }
+    .food__item:nth-child(2n+1) {
+      margin-right: 0; }
+    .food__item:first-of-type {
+      margin-left: 80px;
+      margin-right: 80px; }
+    .food__item:last-of-type {
+      margin-right: 0; } }
+
+@media (min-width: 1120px) {
+  .food__list {
+    width: 1120px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .food__item:first-of-type {
+    margin-left: 0; }
+  .food__item:nth-child(2n+1) {
+    margin-right: 80px; }
+  .food__item:nth-child(3n) {
+    margin-right: 0; } }
+
+.card {
+  position: relative; }
+
+.card__background {
+  fill: transparent;
+  stroke: #1698d9;
+  stroke-width: 4px;
+  fill-rule: evenodd;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  cursor: pointer; }
+
+.card__item {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  overflow: hidden;
+  width: 320px;
+  height: 480px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, transparent 30px, #f2f2f2 0); }
+
+.card__text {
+  margin: 20px 45px; }
+
+.card__photo {
+  position: absolute;
+  bottom: -88px;
+  left: -24px;
+  max-width: 370px; }
+
+.card__price {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  text-align: center;
+  width: 81px;
+  height: 81px;
+  color: #ffffff;
+  background-color: #1698d9;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1; }
+
+.card__slogan {
+  color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+  line-height: 13px;
+  width: 320px; }
+
+.card__slogan--selected {
+  display: none; }
+
+.card__slogan--disabled {
+  color: #ffff66;
+  display: none; }
+
+.card__link {
+  color: #1698d9;
+  text-decoration: none;
+  border-bottom: 1px dashed #1698d9;
+  cursor: pointer; }
+
+.card__point {
+  color: #1698d9; }
+
+.card__background:hover {
+  stroke: #2ea8e6; }
+
+.food__input-checkbox + label:hover .card__price {
+  background-color: #2ea8e6; }
+
+label:hover ~ .card__slogan--default .card__link {
+  color: #2ea8e6; }
+
+.food__input-checkbox:checked + label .card__background {
+  stroke: #d91667; }
+
+.food__input-checkbox:checked + label .card__price {
+  background-color: #d91667; }
+
+.food__input-checkbox:checked + label .card__background:hover {
+  stroke: #e62e7a; }
+
+.food__input-checkbox:checked + label:hover .card__price {
+  background-color: #e62e7a; }
+
+.food__input-checkbox:checked + label:hover .description__title {
+  display: none; }
+
+.food__input-checkbox:checked + label:hover .description__title--selected {
+  display: block;
+  color: #e62e7a; }
+
+.food__input-checkbox:checked ~ .card__slogan--selected {
+  display: block; }
+
+.food__input-checkbox:checked ~ .card__slogan--default,
+.food__input-checkbox:checked ~ .card__slogan--disabled {
+  display: none; }
+
+.food__input-checkbox:disabled ~ .card__slogan--default,
+.food__input-checkbox:disabled ~ .card__slogan--selected {
+  display: none; }
+
+.food__input-checkbox:disabled + label .card__background {
+  stroke: #b3b3b3;
+  cursor: not-allowed; }
+
+.food__input-checkbox:disabled + label .card__item .card__price {
+  background-color: #b3b3b3; }
+
+.food__input-checkbox:disabled + label .card__item::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: linear-gradient(135deg, transparent 30px, #ffffff 0); }
+
+.food__input-checkbox:disabled + label .card__item .description__content,
+.food__input-checkbox:disabled + label .card__item .description__title,
+.food__input-checkbox:disabled + label .card__item .description__name,
+.food__input-checkbox:disabled + label .card__item .description__with {
+  color: #b3b3b3; }
+
+.food__input-checkbox:disabled ~ .card__slogan--disabled {
+  display: block; }
+
+.description__title {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #666666; }
+
+.description__title--selected {
+  display: none; }
+
+.description__name {
+  margin: 0;
+  padding: 0;
+  font-size: 48px;
+  line-height: 48px;
+  color: #000000;
+  font-weight: bold; }
+
+.description__with {
+  margin: 3px 0 17px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000; }
+
+.description__content {
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666; }
+  .description__content > p {
+    margin: 0;
+    padding: 0; }
+
+.price__value {
+  margin: 0;
+  padding: 0;
+  font-size: 42px;
+  line-height: 42px;
+  color: #ffffff; }
+
+.price__type {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  line-height: 22px; }
+
+/*# sourceMappingURL=style.css.map */

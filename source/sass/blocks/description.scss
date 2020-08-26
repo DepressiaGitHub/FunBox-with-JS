@@ -1,0 +1,43 @@
+.description__title {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.description__title--selected {
+  display: none;
+}
+
+.description__name {
+  margin: 0;
+  padding: 0;
+  font-size: 48px;
+  line-height: 48px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.description__with {
+  margin: 3px 0 17px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: lowercase;
+}
+
+.description__content {
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+  text-transform: lowercase;
+
+  & > p {
+    margin: 0;
+    padding: 0;
+  }
+}
